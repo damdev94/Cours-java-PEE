@@ -10,14 +10,18 @@ package com.directmedia.onlinestore.core.entity;
  */
 public class Work {
     
+    private static int lastId;
+    
     public Work(){
-        
+        this.id = lastId++;
     }
     
     public Work(String title){
+        this();
         this.title = title;
     }
     
+    private long id;
     private String title;
     private String genre;
     private int release;
@@ -57,6 +61,14 @@ public class Work {
     }
     public void setArtist(Artist mainArtist){
         this.mainArtist = mainArtist;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
     }
     
 }
