@@ -42,6 +42,8 @@ public class workDetailsServlet extends HttpServlet {
         out.print("Artiste: " + work.getArtist() + "<br/>" );
         out.print("Résumé: " + work.getSummary() + "<br/>" );
         
+        out.print("<form action=\"AddToCart\" method=\"POST\"><input type=\"hidden\" name=\"identifiant\" value=\"" + id +"\"/><input type=\"submit\" value=\"Ajouter\"/></form>");
+        
         
         out.print("</body></html>" );
 

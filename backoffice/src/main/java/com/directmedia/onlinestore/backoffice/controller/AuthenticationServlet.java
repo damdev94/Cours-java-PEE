@@ -7,12 +7,15 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  * @author damien
  */
 @WebServlet(name = "AuthenticationServlet", urlPatterns = {"/login"})
 public class AuthenticationServlet extends HttpServlet {
+    
+    HttpSession session;
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -20,8 +23,11 @@ public class AuthenticationServlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
         
+        session = request.getSession();
+        
         String password = request.getParameter("password");
         String userName = request.getParameter("userName");
+        session.setAttribute("userName", userName);
         
         if ("michel".equals(userName)) {
             if ("123456".equals(password)) {
