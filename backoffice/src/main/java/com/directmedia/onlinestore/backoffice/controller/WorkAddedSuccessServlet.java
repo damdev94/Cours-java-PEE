@@ -16,7 +16,7 @@ public class WorkAddedSuccessServlet extends HttpServlet {
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
 
-        out.print("<html><body>L'oeuvre a bien été ajoutée.");
+        out.print("<html><body>L'oeuvre a bien été ajoutée. son identifiant est " + request.getAttribute("identifiantOeuvre"));
         out.print("<a href=\"catalogue\">Retour au catalogue</a>");
         out.print("</body></html>");
     }

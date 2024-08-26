@@ -58,6 +58,7 @@ public class AddWorkServlet extends HttpServlet {
 
             // Ajouter l'œuvre au catalogue
             Catalogue.listOfWorks.add(nouvelleOeuvre);
+            request.setAttribute("identifiantOeuvre", nouvelleOeuvre.getId());
 
             // Redirection vers le servlet de succès
             response.sendRedirect(request.getContextPath() + "/WorkAddedSuccessServlet");
