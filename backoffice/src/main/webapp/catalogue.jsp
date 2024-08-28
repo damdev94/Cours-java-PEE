@@ -16,7 +16,7 @@
         <title>Catalogue</title>
     </head>
     <body>
-        <%
+    <%
         Artist leonard_de_vinci = new Artist("Léonard de vinci");
         
         Artist vincent_van_gogh = new Artist("Vincent Van Gogh");
@@ -44,19 +44,19 @@
         Catalogue.listOfWorks.add(mona_lisa);
         Catalogue.listOfWorks.add(la_nuit_etoilee);
         Catalogue.listOfWorks.add(le_cri);
-        %>    
+     %>    
         
         <h1>oeuvres au catalogue</h1>
         
-        <%
+    <%
              HashSet<Work> list = Catalogue.listOfWorks;
              for (Work work : list) {
-        %>
+    %>
         
         <%=work.getTitle()%>  <%=work.getRelease()%> <BR/>
         
-        <%
+    <%
             }
-        %>
+    %>
     </body>
 </html>

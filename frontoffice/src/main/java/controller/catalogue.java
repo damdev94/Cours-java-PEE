@@ -70,7 +70,7 @@ public class catalogue extends HttpServlet {
         
         for (Work work : list) {
             out.println(work.getTitle() + " " + work.getRelease() + "   ");
-            out.print("<a href=\"work-details?id=" + work.getId() + "\">Accéder à l'oeuvre</a><br/>");
+            out.print("<a href=\"work-details?id=" + work.getId() + "\">Accéder à l'œuvre</a><br/>");
         }
         
         out.print("</body></html>");
