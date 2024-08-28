@@ -33,7 +33,7 @@ public class workDetailsServlet extends HttpServlet {
             request.setAttribute("work", work);
 
             // Transférer la requête à la JSP
-            RequestDispatcher dispatcher = request.getRequestDispatcher("work-details.jsp");
+            RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/work-details.jsp");
             dispatcher.forward(request, response);
         } else {
             // En cas d'erreur, afficher un message (ou rediriger vers une page d'erreur)
