@@ -37,7 +37,7 @@ public class AuthenticationServlet extends HttpServlet {
             }
         } else if ("caroline".equals(userName)) {
             if ("abcdef".equals(password)) {
-                out.print("<html><body><a href=\"home\">Home</a></body></html>");
+                out.print("<html><body><a href=\"home.jsp\">Home</a></body></html>");
             } else {
                 out.print("<html><body>Login / Mot de passe erroné. <a href=\"login.html\">Réessayer</a></body></html>");
             }
